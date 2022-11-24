@@ -1,0 +1,131 @@
+.main-top {
+  padding: 15px 0;
+  background: rgba(243, 243, 243, 0.31);
+}
+.ads-line {
+  border-top: 1px solid #008837;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #008837;
+
+  & .title {
+    color: #008837 !important;
+    padding-left: 1px;
+    font-weight: 600;
+    font-size: 9px !important;
+    z-index: 1;
+    position: relative;
+    background: transparent !important;
+    padding-top: 4px;
+    border-top-left-radius: 10px;
+    padding-bottom: 4px;
+    line-height: 12px;
+    padding-right: 8px;
+    text-transform: capitalize;
+  }
+}
+.cls-11 {
+  fill: #008837;
+}
+.main-topic {
+  display: flex;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 13px;
+
+  & .hltitle-topic {
+    color: #008837;
+    margin-right: 17px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+
+    & .icon-flash {
+      margin-right: 5px;
+    }
+  }
+
+  & .datetime {
+    color: #000;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  & .topic-list {
+    width: 60%;
+    & .hltitle-item {
+      display: flex;
+      align-items: center;
+    }
+    & .hltitle-item:before {
+      content: "";
+      width: 3px;
+      height: 3px;
+      background: #202124;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    & .slick-prev:before,
+    & .slick-next:before {
+      color: #cacaca;
+    }
+
+    & .slick-prev {
+      left: auto;
+      right: -4px;
+      z-index: 10;
+    }
+  }
+}
+
+// main block
+.main-block {
+  margin-bottom: 45px;
+  margin-top: 15px;
+}
+.main-col-2 {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-gap: 30px;
+}
+.hightlight-top {
+  display: grid;
+  grid-template-columns: 425px 1fr;
+  grid-gap: 26px;
+}
+.hightlight-top__slide-heading {
+  margin-bottom: 10px;
+}
+.hightlight-top__slide {
+  & .slick-dots {
+    bottom: -20px;
+    & li {
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+
+      & button {
+        width: 8px;
+        height: 8px;
+        padding: 0 4px;
+
+        &::before {
+          width: 8px;
+          height: 8px;
+          line-height: 8px;
+          font-size: 10px;
+        }
+      }
+    }
+    & li.slick-active button:before {
+      opacity: 1;
+      color: rgba(0, 136, 55, 0.5);
+    }
+  }
+}
+.hightlight-top__list-item:not(:last-child) {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
