@@ -99,6 +99,18 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
       });
     },
+    // sticky bar home 1
+    stickyHome1: function () {
+      $(".leftSidebar-1,.rightSidebar-1").theiaStickySidebar({
+        additionalMarginTop: 30,
+      });
+    },
+    // sticky bar home 2
+    stickyHome2: function () {
+      $(".leftSidebar-2,.rightSidebar-2").theiaStickySidebar({
+        additionalMarginTop: 30,
+      });
+    },
     // scroll top
     scrollFunc: function () {
       if (backTop) {
@@ -132,6 +144,10 @@ document.addEventListener("DOMContentLoaded", function () {
       this.slideToppicList();
       // slide hightlight
       this.slideHightlight();
+      // sticky bar home 1
+      this.stickyHome1();
+      // sticky bar home 2
+      this.stickyHome2();
     },
   };
 
