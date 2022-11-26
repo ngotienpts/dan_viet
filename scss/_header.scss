@@ -245,14 +245,14 @@ header {
     border-bottom: 3px solid #008837;
     border-top: 1px solid rgba(108, 110, 112, 0.1);
 
-    & #nav.sticky:not(.active) {
+    &.sticky:not(.active) {
       position: fixed;
       left: 0;
       right: 0;
       top: 0;
       z-index: 9999;
     }
-    & .sticky:not(.headerother) {
+    &.sticky:not(.headerother) {
       background: #fff;
     }
     & .nav-bar {

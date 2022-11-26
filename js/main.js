@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // width document
   var widthDoc = document.querySelector("body");
 
+  // show menu pc
+  var barPc = document.getElementById("nav");
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -26,8 +29,27 @@ document.addEventListener("DOMContentLoaded", function () {
           a.style.marginLeft = "-" + a.offsetLeft + "px";
         });
       }
+
+      // show menu pc
+      if (barPc) {
+        var btnMenu = barPc.querySelector(".icon-expandmenu");
+        var menuPc = barPc.querySelector(".expand-bar");
+
+        btnMenu.onclick = () => {
+          menuPc.classList.toggle("active");
+          btnMenu.classList.toggle("active");
+        };
+      }
       // hide cac element khi click ra ngoai
-      document.addEventListener("click", function (e) {});
+      document.addEventListener("click", function (e) {
+        if (
+          !menuPc.querySelector(".wrapper").contains(e.target) &&
+          !e.target.matches(".icon-expandmenu")
+        ) {
+          menuPc.classList.remove("active");
+          btnMenu.classList.remove("active");
+        }
+      });
     },
 
     // slide topic list
@@ -123,6 +145,19 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           backTop.style.opacity = 0;
           backTop.style.visibility = "hidden";
+        }
+      }
+
+      if (barPc) {
+        if (
+          document.body.scrollTop > barPc.offsetTop ||
+          document.documentElement.scrollTop > barPc.offsetTop
+        ) {
+          barPc.classList.add("sticky");
+          barPc.classList.remove("active");
+        } else {
+          barPc.classList.remove("sticky");
+          barPc.classList.add("active");
         }
       }
     },

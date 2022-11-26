@@ -96,6 +96,68 @@
   </head>
 
   <body>
+    <!-- popup -->
+    <div id="cmt-account-header" class="hidden" style="display: block;">
+      <div class="wrap">
+          <ul class="tabs">
+              <li class="clickable not-login active" data-target="login" style="display: block;">Đăng nhập</li>
+              <li class="clickable not-login" data-target="signup" style="display: block;">Đăng ký</li>
+              <li class="clickable close">×</li>
+          </ul>
+          <p id="cmt_alert">Vui lòng đăng nhập hoặc đăng ký để gửi bình luận</p>
+          <div class="tab-content active" data-tab="login">
+              <div id="cmt-account-social" class="text-center">
+                  <button data-type="loginFacebook" class="lgfb"><i class="iconnew-fb"></i>Facebook</button>
+                  <button data-type="loginGoogle" class="lggg"><i class="iconnew-gg"></i>Google</button>
+              </div>
+              <input type="email" value="" id="_login_email" placeholder="Email">
+              <div class="box_pass">
+                  <input type="password" value="" id="_login_password" autocomplete="off" placeholder="Mật khẩu">
+                  <i class="iconew-eye closed clickable"></i>
+              </div>
+              <div class="btn_login">
+                  <p class="clickable btn" id="_btn_login">Đăng nhập</p>
+  
+              </div>
+          </div>
+          <div class="tab-content" data-tab="signup">
+              <p class="label email">Email</p>
+              <input type="email" value="" id="_sign_email">
+              <div hidden="">
+                  <p class="label">Họ và tên</p>
+                  <input type="text" value="" id="_sign_name">
+              </div>
+              <div class="box_pass">
+                  <p class="label password">Mật khẩu</p>
+                  <input type="password" value="" id="_sign_password" autocomplete="off">
+                  <i class="iconew-eye closed clickable"></i>
+              </div>
+              
+              <p class="label confirm">Mã xác nhận</p>
+              <div>
+                  <input type="text" value="" id="_sign_captcha">
+                  <img class="img-captcha clickable" alt="Captcha" id="_img_captcha" src="https://id.danviet.vn/captcha.htm?1669437290739" data-original="https://id.danviet.vn/Captcha.aspx">
+                  <img class="btn-refresh" src="https://static.mediacdn.vn/danviet/mob_images/refresh-button@2x.png" alt="refesh">
+              </div>
+  
+              <div class="clear"></div>
+              <div class="btn_login">
+                  <p class="clickable btn" id="_btn_sign">Đăng ký</p>
+              </div>
+          </div>
+          <div class="tab-content" data-tab="info">
+              <p>Xin chào, <strong data-info-name=""></strong>!</p>
+              <p class="m-30-b">Bạn đã đăng nhập với email: <strong data-info-email=""></strong></p>
+              <p class="clickable btn right" id="_btn_logout">Đăng xuất</p>
+          </div>
+          <div class="tab-content score-popup" data-tab="score">
+              <p class="title"></p>
+              <ul></ul>
+          </div>
+  
+      </div>
+  </div>
+    <!-- end popup -->
     <!-- header -->
     <header id="header">
       <!-- header top -->
@@ -1314,7 +1376,7 @@
                     <!-- img -->
                     <div class="hightlight-bot-img">
                       <div class="">
-                        <div class="thumb-img border-5" data-icontype="1">
+                        <div class="thumb-img border-5" data-icontype="3">
                           <a href="#" class="thumb-item thumb-5x3 img">
                             <img class="" src="./images/4.jpg" alt=""
                           /></a>
@@ -1393,7 +1455,7 @@
                   <!-- img -->
                   <div class="article-img">
                     <div class="">
-                      <div class="thumb-img border-5">
+                      <div class="thumb-img border-5" data-icontype="3">
                         <a href="#" class="thumb-item thumb-5x3">
                           <img class="" src="./images/4.jpg" alt=""
                         /></a>
@@ -1435,7 +1497,7 @@
                   <!-- img -->
                   <div class="article-img">
                     <div class="">
-                      <div class="thumb-img border-5">
+                      <div class="thumb-img border-5" data-icontype="1">
                         <a href="#" class="thumb-item thumb-5x3">
                           <img class="" src="./images/4.jpg" alt=""
                         /></a>
@@ -1477,7 +1539,7 @@
                   <!-- img -->
                   <div class="article-img">
                     <div class="">
-                      <div class="thumb-img border-5">
+                      <div class="thumb-img border-5" data-icontype="20">
                         <a href="#" class="thumb-item thumb-5x3">
                           <img class="" src="./images/4.jpg" alt=""
                         /></a>
