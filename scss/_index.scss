@@ -196,6 +196,11 @@
       color: rgba(0, 136, 55, 0.5);
     }
   }
+  & .category {
+    color: #008837;
+    font: normal 13px/21px Roboto, sans-serif;
+    margin-bottom: 12px;
+  }
 }
 .hightlight-top__list-item:not(:last-child) {
   padding-bottom: 15px;
@@ -211,6 +216,7 @@
   margin-bottom: 25px;
   border-bottom: 3px solid #008837;
 }
+
 .home-article {
   display: flex;
   width: 100%;
@@ -257,7 +263,9 @@
     display: none;
   }
 }
-
+.cate-time-hide-pc {
+  display: none;
+}
 .box-event-home-wrapper {
   background-color: #eae0c7;
 }
@@ -637,4 +645,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 24px;
+}
+.share-facebook {
+  align-items: center;
+  justify-content: end;
+  color: #6c6e70;
+  font: normal 12px Roboto;
+  margin-top: 12px;
+
+  & img {
+    margin-right: 4px;
+  }
 }

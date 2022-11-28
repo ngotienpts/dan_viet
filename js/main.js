@@ -8,6 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // show menu pc
   var barPc = document.getElementById("nav");
 
+  // tabs
+  var tabs = document.querySelectorAll(".tab-item");
+  var panes = document.querySelectorAll(".tab-pane");
+
+  // show popup login
+  var linkAccount = document.getElementById("top-link-account");
+  var popupLogin = document.getElementById("cmt-account-header");
+
+  // change password to show text
+  var boxPass = document.querySelectorAll(".box_pass");
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -40,6 +51,50 @@ document.addEventListener("DOMContentLoaded", function () {
           btnMenu.classList.toggle("active");
         };
       }
+
+      // tabs
+      if (tabs && panes) {
+        tabs.forEach(function (tab, index) {
+          var pane = panes[index];
+          tab.onclick = function () {
+            document
+              .querySelector(".tab-item.active")
+              .classList.remove("active");
+            document
+              .querySelector(".tab-pane.active")
+              .classList.remove("active");
+
+            this.classList.add("active");
+            pane.classList.add("active");
+          };
+        });
+      }
+
+      // show login
+      linkAccount.onclick = () => {
+        popupLogin.style.display = "block";
+        widthDoc.style.overflow = "hidden";
+      };
+      var closePopup = popupLogin.querySelector(".close");
+      closePopup.onclick = () => {
+        popupLogin.style.display = "none";
+        widthDoc.style.overflow = "unset";
+      };
+
+      // change password to show text
+      boxPass.forEach(function (el) {
+        var eyeIcon = el.querySelector(".iconew-eye");
+        var typeInput = el.querySelector(".type-input");
+
+        eyeIcon.onclick = () => {
+          eyeIcon.classList.toggle("closed");
+          if (typeInput.getAttribute("type") == "password") {
+            typeInput.setAttribute("type", "text");
+          } else {
+            typeInput.setAttribute("type", "password");
+          }
+        };
+      });
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {
         if (
