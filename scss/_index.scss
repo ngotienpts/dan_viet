@@ -100,7 +100,8 @@
 .home-hightlight [data-icontype="1"] .thumb-item:before,
 .box-other [data-icontype="1"] .thumb-item:before,
 .widget [data-icontype="1"] .thumb-item:before,
-.home-articles [data-icontype="1"] .thumb-item:before {
+.home-articles [data-icontype="1"] .thumb-item:before,
+[data-icontype="1"] .thumb-item:before {
   content: "";
   position: absolute;
   bottom: 10px;
@@ -112,7 +113,8 @@
   z-index: 1;
 }
 .home-boxnewday [data-icontype="1"] .title::before,
-.home-hightlight [data-icontype="1"] .title:before {
+.home-hightlight [data-icontype="1"] .title:before,
+[data-icontype="1"] .title:before {
   content: "";
   display: inline-block;
   margin-right: 5px;
@@ -125,7 +127,8 @@
 }
 .box-event-home [data-icontype="2"] .title:before,
 .home-boxnewday [data-icontype="2"] .title:before,
-.home-hightlight [data-icontype="2"] .title:before {
+.home-hightlight [data-icontype="2"] .title:before,
+[data-icontype="2"] .title:before {
   content: "";
   display: inline-block;
   margin-right: 5px;
@@ -136,7 +139,8 @@
   margin-bottom: -2px;
 }
 .home-hightlight [data-icontype="20"] .thumb-item:before,
-.home-articles [data-icontype="20"] .thumb-item:before {
+.home-articles [data-icontype="20"] .thumb-item:before,
+[data-icontype="20"] .thumb-item:before {
   content: "";
   position: absolute;
   bottom: 10px;
@@ -151,7 +155,8 @@
 .home-boxnewday [data-icontype="2"] .thumb-item:before,
 .widget [data-icontype="2"] .thumb-item:before,
 .home-hightlight [data-icontype="3"] .thumb-item:before,
-.home-articles [data-icontype="3"] .thumb-item:before {
+.home-articles [data-icontype="3"] .thumb-item:before,
+[data-icontype="3"] .thumb-item:before {
   content: "";
   position: absolute;
   bottom: 10px;
@@ -170,32 +175,32 @@
 .hightlight-top__slide-heading {
   margin-bottom: 10px;
 }
-.hightlight-top__slide {
-  & .slick-dots {
-    bottom: -20px;
-    & li {
+.slick-dots {
+  bottom: -20px;
+  & li {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+
+    & button {
       width: 8px;
       height: 8px;
-      margin: 0 4px;
+      padding: 0 4px;
 
-      & button {
+      &::before {
         width: 8px;
         height: 8px;
-        padding: 0 4px;
-
-        &::before {
-          width: 8px;
-          height: 8px;
-          line-height: 8px;
-          font-size: 10px;
-        }
+        line-height: 8px;
+        font-size: 10px;
       }
     }
-    & li.slick-active button:before {
-      opacity: 1;
-      color: rgba(0, 136, 55, 0.5);
-    }
   }
+  & li.slick-active button:before {
+    opacity: 1;
+    color: rgba(0, 136, 55, 0.5);
+  }
+}
+.hightlight-top__slide {
   & .category {
     color: #008837;
     font: normal 13px/21px Roboto, sans-serif;

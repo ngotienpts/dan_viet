@@ -13,11 +13,26 @@ document.addEventListener("DOMContentLoaded", function () {
   var panes = document.querySelectorAll(".tab-pane");
 
   // show popup login
-  var linkAccount = document.getElementById("top-link-account");
+  var linkAccounts = document.querySelectorAll(".js_popup_show");
   var popupLogin = document.getElementById("cmt-account-header");
 
   // change password to show text
   var boxPass = document.querySelectorAll(".box_pass");
+
+  // show menu mobile
+  var menu = document.getElementById("menu");
+  var showMenus = document.querySelectorAll(".js_menu_show");
+
+  // show search mobile
+  var showSearchMb = document.getElementById("header-btn-search");
+  var searchMb = document.getElementById("search-form-mb");
+
+  // scroll hide footer mb
+  var prevScrollpos = window.pageYOffset;
+
+  // show categories top
+  var barBreadcumCate = document.querySelector(".js_breadcum_show");
+  var breadcumList = document.querySelector(".breadcum-mb-list");
 
   const app = {
     // su ly cac su kien
@@ -71,38 +86,77 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // show login
-      linkAccount.onclick = () => {
-        popupLogin.style.display = "block";
-        widthDoc.style.overflow = "hidden";
-      };
-      var closePopup = popupLogin.querySelector(".close");
-      closePopup.onclick = () => {
-        popupLogin.style.display = "none";
-        widthDoc.style.overflow = "unset";
-      };
+      if (linkAccounts && popupLogin) {
+        linkAccounts.forEach(function (linkAccount) {
+          linkAccount.onclick = () => {
+            popupLogin.style.display = "block";
+            widthDoc.style.overflow = "hidden";
+          };
+        });
+        var closePopup = popupLogin.querySelector(".close");
+        closePopup.onclick = () => {
+          popupLogin.style.display = "none";
+          widthDoc.style.overflow = "unset";
+        };
+      }
 
       // change password to show text
-      boxPass.forEach(function (el) {
-        var eyeIcon = el.querySelector(".iconew-eye");
-        var typeInput = el.querySelector(".type-input");
+      if (boxPass) {
+        boxPass.forEach(function (el) {
+          var eyeIcon = el.querySelector(".iconew-eye");
+          var typeInput = el.querySelector(".type-input");
 
-        eyeIcon.onclick = () => {
-          eyeIcon.classList.toggle("closed");
-          if (typeInput.getAttribute("type") == "password") {
-            typeInput.setAttribute("type", "text");
-          } else {
-            typeInput.setAttribute("type", "password");
-          }
+          eyeIcon.onclick = () => {
+            eyeIcon.classList.toggle("closed");
+            if (typeInput.getAttribute("type") == "password") {
+              typeInput.setAttribute("type", "text");
+            } else {
+              typeInput.setAttribute("type", "password");
+            }
+          };
+        });
+      }
+
+      // show menu mobile
+      if (showMenus) {
+        showMenus.forEach((showMenu) => {
+          showMenu.onclick = function () {
+            if (menu.matches(".hide")) {
+              menu.classList.remove("hide");
+            }
+          };
+        });
+      }
+      if (menu) {
+        var closeMenu = menu.querySelector("#menu-btn-close");
+        closeMenu.onclick = () => {
+          menu.classList.add("hide");
         };
-      });
+      }
+
+      // show search mobile
+      if (showSearchMb) {
+        showSearchMb.onclick = () => {
+          searchMb.classList.toggle("hidden");
+        };
+      }
+
+      // show breadcum cate mobile
+      if (barBreadcumCate) {
+        barBreadcumCate.onclick = () => {
+          breadcumList.classList.toggle("show");
+        };
+      }
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {
-        if (
-          !menuPc.querySelector(".wrapper").contains(e.target) &&
-          !e.target.matches(".icon-expandmenu")
-        ) {
-          menuPc.classList.remove("active");
-          btnMenu.classList.remove("active");
+        if (menuPc && btnMenu) {
+          if (
+            !menuPc.querySelector(".wrapper").contains(e.target) &&
+            !e.target.matches(".icon-expandmenu")
+          ) {
+            menuPc.classList.remove("active");
+            btnMenu.classList.remove("active");
+          }
         }
       });
     },
@@ -176,16 +230,51 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
       });
     },
+    // slide tin doc nhieu
+    slideReadALot: function () {
+      $(".read-lot-slide").slick({
+        dots: true,
+        arrows: true,
+        infinite: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    },
     // sticky bar home 1
     stickyHome1: function () {
       $(".leftSidebar-1,.rightSidebar-1").theiaStickySidebar({
-        additionalMarginTop: 30,
+        additionalMarginTop: 60,
       });
     },
     // sticky bar home 2
     stickyHome2: function () {
       $(".leftSidebar-2,.rightSidebar-2").theiaStickySidebar({
-        additionalMarginTop: 30,
+        additionalMarginTop: 60,
       });
     },
     // scroll top
@@ -215,6 +304,14 @@ document.addEventListener("DOMContentLoaded", function () {
           barPc.classList.add("active");
         }
       }
+
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("bottom-bar").style.bottom = "0";
+      } else {
+        document.getElementById("bottom-bar").style.bottom = "-56px";
+      }
+      prevScrollpos = currentScrollPos;
     },
     // window scroll
     windowScroll: function () {
@@ -238,6 +335,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.stickyHome1();
       // sticky bar home 2
       this.stickyHome2();
+      // slide tin doc nhieu
+      this.slideReadALot();
     },
   };
 
