@@ -478,9 +478,59 @@
       }
     }
   }
-  /*======================================================================*/
+  /*====================================================================== talk*/
   .talk-container {
-    padding: 0 20px;
+    padding: 20px;
+  }
+  .talk-top {
+    margin-bottom: 20px;
+  }
+  .talk-top-item,
+  .talk-bot-item {
+    padding: 20px 0;
+    border-bottom: thin solid #e9eaee;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  .talk-bot-item {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .talk-top-heading,
+  .talk-bot-heading {
+    font-size: 20px;
+  }
+  /*====================================================================== detail*/
+  .detail-main,
+  .dt-content,
+  .tags,
+  .box-cmt {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sticky-ele,
+  .date-select {
+    display: none !important;
+  }
+
+  .box-related,
+  .box-dvdesc {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .box-related-item {
+    margin: 0;
+    & .box-related-img {
+      width: 30%;
+    }
+  }
+  .box-dvdesc {
+    display: block;
+    & .fb-page {
+      margin-top: 20px;
+    }
   }
 }
 

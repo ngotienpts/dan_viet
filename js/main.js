@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var barBreadcumCate = document.querySelector(".js_breadcum_show");
   var breadcumList = document.querySelector(".breadcum-mb-list");
 
+  // headerTalk
+  var headerTalk = document.querySelector(".headerother");
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -308,9 +311,22 @@ document.addEventListener("DOMContentLoaded", function () {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("bottom-bar").style.bottom = "0";
+        if (headerTalk) {
+          if (headerTalk.matches(".sticky")) {
+            document.querySelector(".headerother").classList.remove("sticky");
+            document.querySelector(".headerother").classList.add("active");
+          }
+        }
       } else {
         document.getElementById("bottom-bar").style.bottom = "-56px";
+        if (headerTalk) {
+          if (headerTalk.matches(".active")) {
+            document.querySelector(".headerother").classList.add("sticky");
+            document.querySelector(".headerother").classList.remove("active");
+          }
+        }
       }
+
       prevScrollpos = currentScrollPos;
     },
     // window scroll

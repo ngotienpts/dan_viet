@@ -18,6 +18,14 @@
   grid-gap: 30px;
   margin-bottom: 30px;
 }
+.header-talk-mb-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
 .header-talk-mb {
   display: flex;
   align-items: center;
