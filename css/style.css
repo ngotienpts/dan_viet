@@ -146,6 +146,12 @@ table {
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: "Century";
+  src: url("../fonts/century/cebswfte.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -230,6 +236,11 @@ img {
 }
 
 /*===========================================================================*/
+.w-650 {
+  max-width: 40.625rem;
+  margin: 0 auto;
+}
+
 .w-980 {
   max-width: 61.25rem;
   margin: 0 auto;
@@ -2781,39 +2792,42 @@ header #nav .icon-expandmenu.active {
   border-bottom: 1px solid #eee;
 }
 
-.header-ema {
-  background: #265a44;
-  color: #fefefe;
+.ema-header-pc {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.25rem 0.75rem;
+  justify-content: center;
+}
+.ema-header-pc .ema-header-pc-heading {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Century";
+  text-transform: capitalize;
+}
+.ema-header-pc .ema-likeshare {
+  position: absolute;
+  right: 70px;
+  top: 14px;
 }
 
-.header-ema-left {
-  font-size: 1.5rem;
-  cursor: pointer;
+.ema-mb-heading {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Century";
+  text-transform: capitalize;
 }
 
-.header-ema-center {
-  font-size: 25px;
-  font-family: "Arial", sans-serif;
+.ema-share-heading {
+  color: #fff;
+  font: normal 12px/21px Roboto;
 }
-
-.header-ema-center span {
-  color: #de2322;
-}
-
-.header-ema-right {
-  background: #fefefe;
-  padding: 5px 10px;
-  border-radius: 6px;
-  color: #265a44;
-  cursor: pointer;
+.ema-share-heading svg {
+  margin-bottom: -2px;
 }
 
 .ema-wrapper {
-  background: #f4e7d4;
+  background: #fff;
   font-family: "Noto Serif", serif;
   padding-bottom: 2rem;
 }
@@ -2826,18 +2840,19 @@ header #nav .icon-expandmenu.active {
 .ema-container h4,
 .ema-container h5,
 .ema-container h6 {
-  max-width: 670px;
+  max-width: 650px;
   margin: auto;
 }
 
 .ema-container p {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
-  margin-bottom: 1rem;
-  color: #000;
+  margin-bottom: 15px;
+  color: #202124;
 }
 
-.ema-container p strong {
+.ema-container p strong,
+.ema-container p b {
   font-weight: bold;
 }
 
@@ -2850,7 +2865,7 @@ header #nav .icon-expandmenu.active {
 }
 
 .ema-container figure.expNoEdit.small {
-  max-width: 800px;
+  max-width: 980px;
   margin: auto;
   clear: both;
 }
@@ -2873,6 +2888,19 @@ header #nav .icon-expandmenu.active {
 
 .ema-container figure.expNoEdit img {
   margin: auto;
+}
+
+.detail-images {
+  padding-top: 50px;
+}
+
+figure.expNoEdit[type=Photo] {
+  width: 85vw;
+  margin-left: calc((650px - 85vw) / 2);
+}
+
+.text-right {
+  text-align: right;
 }
 
 #cmt-account-header {

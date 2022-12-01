@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // headerTalk
   var headerTalk = document.querySelector(".headerother");
 
+  // fancybox
+  var fancyboxes = document.querySelectorAll(".fancybox-full");
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -280,6 +283,14 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalMarginTop: 60,
       });
     },
+    // fancybox
+    fancybox: function () {
+      if (fancyboxes) {
+        fancyboxes.forEach(function (fancybox) {
+          $(".fancybox-full a").fancybox();
+        });
+      }
+    },
     // scroll top
     scrollFunc: function () {
       if (backTop) {
@@ -353,6 +364,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.stickyHome2();
       // slide tin doc nhieu
       this.slideReadALot();
+      // fancybox
+      this.fancybox();
     },
   };
 
