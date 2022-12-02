@@ -563,18 +563,18 @@
     font-size: 15px;
   }
 
-  .box_samecate .sc-heading {
+  .box-samecat .sc-heading {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .box_samecate .sc-heading h3 {
+  .box-samecat .sc-heading h3 {
     color: #111;
   }
-  .box_samecate .advertisement-container {
+  .box-samecat .advertisement-container {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .box_samecate .advertisement-item:first-child {
+  .box-samecat .advertisement-item:first-child {
     grid-column: 1/2;
     grid-row: 1/2;
   }
@@ -610,6 +610,10 @@
   figure.expNoEdit[type=Photo] {
     width: 100%;
     margin: auto;
+  }
+
+  .detail-images {
+    padding-top: 20px;
   }
 }
 

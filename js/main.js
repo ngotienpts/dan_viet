@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // show menu pc
   var barPc = document.getElementById("nav");
-
+  var offset = barPc.offsetTop;
   // tabs
   var tabs = document.querySelectorAll(".tab-item");
   var panes = document.querySelectorAll(".tab-pane");
@@ -37,8 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // headerTalk
   var headerTalk = document.querySelector(".headerother");
 
+  // header detail
+  var headerDetail = document.querySelector(".header_detail");
+
+  // header mobile
+  var headerMb = document.querySelector("#header-mb");
+
   // fancybox
   var fancyboxes = document.querySelectorAll(".fancybox-full");
+
+  // show hide sticky detail
+  var stickyStart = document.querySelector(".sticky-start");
+  var stickyEnd = document.querySelector(".sticky-end");
+  var stickyEl = document.querySelector(".sticky-ele");
 
   const app = {
     // su ly cac su kien
@@ -293,6 +304,24 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     // scroll top
     scrollFunc: function () {
+      if (stickyStart && stickyEnd && stickyEl) {
+        if (
+          window.scrollY > stickyStart.offsetTop &&
+          window.scrollY < stickyEnd.offsetTop
+        ) {
+          setTimeout(() => {
+            if (!stickyEl.matches(".sticking")) {
+              stickyEl.classList.add("sticking");
+            }
+          }, 100);
+        } else {
+          setTimeout(() => {
+            if (stickyEl.matches(".sticking")) {
+              stickyEl.classList.remove("sticking");
+            }
+          }, 100);
+        }
+      }
       if (backTop) {
         if (
           document.body.scrollTop > 300 ||
@@ -307,10 +336,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (barPc) {
-        if (
-          document.body.scrollTop > barPc.offsetTop ||
-          document.documentElement.scrollTop > barPc.offsetTop
-        ) {
+        if (window.pageYOffset >= offset) {
           barPc.classList.add("sticky");
           barPc.classList.remove("active");
         } else {
@@ -328,6 +354,12 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".headerother").classList.add("active");
           }
         }
+
+        if (headerDetail) {
+          if (headerDetail.matches(".add_sticky")) {
+            headerDetail.classList.remove("add_sticky");
+          }
+        }
       } else {
         document.getElementById("bottom-bar").style.bottom = "-56px";
         if (headerTalk) {
@@ -336,8 +368,13 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".headerother").classList.remove("active");
           }
         }
-      }
 
+        if (headerDetail) {
+          if (!headerDetail.matches(".add_sticky")) {
+            headerDetail.classList.add("add_sticky");
+          }
+        }
+      }
       prevScrollpos = currentScrollPos;
     },
     // window scroll

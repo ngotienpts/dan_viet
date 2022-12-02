@@ -134,69 +134,98 @@
         </div>
       </div>
       <!-- end header talk pc-->
-      <!-- header talk mb -->
-      <div class="header-talk-mb-wrapper d-2xl-none d-sm-block">
-        <!-- nav -->
-        <div class="header-talk-mb">
-          <a href="/" title="Trang chủ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="26"
-              viewBox="0 0 26 26"
+      <!-- mb -->
+      <div id="header-mb" class="clearafter d-2xl-none d-sm-block">
+        <div class="wrapper px-20 header-mb">
+          <div class="left">
+            <span
+              class="icon icon-menu js_menu_show"
+              id="header-btn-menu"
+              title="Menu"
+            ></span>
+
+            <h1>
+              <span class="hidden">Dân Việt</span>
+              <a href="/" title="Dân Việt" class="icon icon-logo"></a>
+            </h1>
+          </div>
+          <ul class="right">
+            <li id="header-btn-search">
+              <a href="javascript:;" rel="nofollow">
+                <img src="./images/icon_search.svg" alt="Search"
+              /></a>
+            </li>
+            <li class="clickable js_popup_show" id="top-link-account">
+              <a href="javascript:;" rel="nofollow" class="first">
+                <img src="./images/icon_user.svg" alt="Account"
+              /></a>
+              <div class="second"></div>
+            </li>
+          </ul>
+        </div>
+        <div id="search-form-mb" class="hidden">
+          <div class="wrapper">
+            <input
+              type="text"
+              maxlength="160"
+              id="search-field"
+              placeholder="Nhập từ khóa tìm kiếm"
+              class="left"
+            />
+            <button
+              id="search-btn"
+              title="Tìm kiếm"
+              class="right"
+              
+              style="font-size: 14px"
             >
-              <g
-                id="Group_1831"
-                data-name="Group 1831"
-                transform="translate(-20 -8)"
-              >
-                <g
-                  id="Ellipse_625"
-                  data-name="Ellipse 625"
-                  transform="translate(20 8)"
-                  stroke="#8f8f8f"
-                  stroke-width="0.5"
-                >
-                  <circle cx="13" cy="13" r="13" stroke="none"></circle>
-                  <circle cx="13" cy="13" r="12.75" fill="none"></circle>
-                </g>
-                <g
-                  id="left-arrow_1_"
-                  data-name="left-arrow (1)"
-                  transform="translate(25 -21.838)"
-                >
-                  <g
-                    id="Group_1582"
-                    data-name="Group 1582"
-                    transform="translate(0 35.838)"
-                  >
-                    <path
-                      id="Path_745"
-                      data-name="Path 745"
-                      d="M16,42.093H2.391l5.372-5.372-.883-.883L0,42.718,6.88,49.6l.883-.883L2.391,43.343H16Z"
-                      transform="translate(0 -35.838)"
-                      fill="#8f8f8f"
-                    ></path>
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </a>
-          <h1 class="ema-mb-heading">Ảnh</h1>
-          <div class="ema-share-heading">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14.524" height="14.334" viewBox="0 0 14.524 14.334">
-                <g id="share" transform="translate(0 -3.343)">
-                    <g id="Group_1395" data-name="Group 1395" transform="translate(0 3.343)">
-                        <path id="Path_679" data-name="Path 679" d="M14.524,10.1,7.762,3.343v4.43A8.2,8.2,0,0,0,0,15.963v1.714l.825-1.5a7.328,7.328,0,0,1,6.427-3.8c.17,0,.341.006.511.018v4.476ZM7.252,11.494A8.21,8.21,0,0,0,1.07,14.3,7.336,7.336,0,0,1,8.2,8.64h.439V5.465l4.64,4.64-4.64,4.64V11.6l-.385-.048A8.2,8.2,0,0,0,7.252,11.494Z" transform="translate(0 -3.343)" fill="#fff"></path>
-                    </g>
-                </g>
-            </svg>
-            Chia sẻ
+              Tìm
+            </button>
+          </div>
         </div>
-        </div>
-        <!-- end nav -->
       </div>
-      <!-- end header talk mb -->
+      <!-- end mb -->
+      <!-- mb detail -->
+      <div class=" d-2xl-none d-sm-block">
+        <div class="header_detail">
+          <div class="header_detail__left">
+            <span class="icon icon-menu js_menu_show" id="header-btn-menu"></span>
+            <a href="/" title="Dân Việt" class="icon icon-logo" style="width: 21px; height: 18px; background-position: -19px 0; background-size: auto; margin-bottom: 0; margin-left: 10px;"></a>
+          </div>
+          <ul class="header_detail__right">
+              <li class="btn-sizep fs-14 mr-12">
+                <span class="size-default">Aa</span>
+              </li>
+              <li class="btn-sizep fs-14">
+                <span class="size-plus">Aa+</span>
+              </li>
+              <li>
+                  <div class="kc-item kc-facebook">
+                      <a href="javascript:;" class="icon-kcf" title="Chia sẻ"></a>
+                  </div>
+              </li>
+              <li class="zl-share">
+                <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="3" data-color="blue" data-customize="false" style="position: relative; display: inline-block; width: 30px; height: 30px;"><iframe id="cd741bec-1010-4f5d-8c4a-79ed54547f15" name="cd741bec-1010-4f5d-8c4a-79ed54547f15" frameborder="0" allowfullscreen="" scrolling="no" width="30px" height="30px" src="https://button-share.zalo.me/share_inline?id=cd741bec-1010-4f5d-8c4a-79ed54547f15&amp;layout=3&amp;color=blue&amp;customize=false&amp;width=30&amp;height=30&amp;isDesktop=false&amp;url=https%3A%2F%2Fdanviet.vn%2Fphe-duyet-he-so-dieu-chinh-gia-dat-de-boi-thuong-du-an-duong-vanh-dai-3-tphcm-2022120207331139.htm&amp;d=eyJ1cmwiOiJodHRwczovL2RhbnZpZXQudm4vcGhlLWR1eWV0LWhlLXNvLWRpZXUtY2hpbmgtZ2lhLWRhdC1kZS1ib2ktdGh1b25nLWR1LWFuLWR1b25nLXZhbmgtZGFpLTMtdHBoY20tMjAyMjEyMDIwNzMzMTEzOS5odG0ifQ%253D%253D&amp;shareType=0" style="position: absolute; z-index: 99; top: 0px; left: 0px;"></iframe></div>
+            </li>
+              <li>
+                  <a href="#comment-frame" class="comment_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10.577" height="9.899" viewBox="0 0 10.577 9.899" class="icon">
+                          <defs>
+                              <style>
+                                  .cls-1 {
+                                      fill: #fff
+                                  }
+                              </style>
+                          </defs>
+                          <g id="chat" transform="translate(0 -10.793)">
+                              <path id="Path_908" d="M9.322 15H1.254A1.3 1.3 0 0 0 0 16.334v4.756a1.3 1.3 0 0 0 1.254 1.334h1.284v2.25a.225.225 0 0 0 .135.21.2.2 0 0 0 .076.015.206.206 0 0 0 .157-.074l2.052-2.4h4.364a1.3 1.3 0 0 0 1.254-1.334v-4.757A1.3 1.3 0 0 0 9.322 15z" class="cls-1" data-name="Path 908" transform="translate(0 -4.207)"></path>
+                          </g>
+                      </svg></a>
+              </li>
+          </ul>
+      </div>
+      </div>
+      <!-- end mb detail -->
     </header>
     <!-- end header -->
     <!-- main -->
@@ -1709,6 +1738,28 @@
     <script src="./js/theia-sticky-sidebar.js"></script>
     <script src="./lib/fancybox/jquery.fancybox.min.js"></script>
     <script src="./js/main.js"></script>
-    
+    <script>
+      function getSize() {
+        size = $( ".js_change_size" ).css("font-size");
+        size = parseInt(size, 10);
+
+        size2 = $( ".js_change_size2" ).css("font-size");
+        size2 = parseInt(size2, 10);
+
+        size3 = $( ".js_change_size3" ).css("font-size");
+        size3 = parseInt(size3, 10);
+      }
+      getSize();
+      $(".size-plus" ).on( "click", function() {
+        $(".js_change_size" ).css("font-size",size + 1);
+        $(".js_change_size2" ).css("font-size",size2 + 1);
+        $(".js_change_size3" ).css("font-size",size3 + 1);
+      });
+      $(".size-default" ).on( "click", function() {
+        $(".js_change_size" ).css("font-size",size);
+        $(".js_change_size2" ).css("font-size",size2);
+        $(".js_change_size3" ).css("font-size",size3);
+      });
+    </script>
   </body>
 </html>

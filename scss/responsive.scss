@@ -555,7 +555,7 @@
     }
   }
 
-  .box_samecate {
+  .box-samecat {
     & .sc-heading {
       padding-left: 20px;
       padding-right: 20px;
@@ -605,6 +605,9 @@
   figure.expNoEdit[type="Photo"] {
     width: 100%;
     margin: auto;
+  }
+  .detail-images {
+    padding-top: 20px;
   }
 }
 

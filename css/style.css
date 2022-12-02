@@ -2574,7 +2574,7 @@ header #nav .icon-expandmenu.active {
 .sticky-ele.sticking {
   display: flex;
   position: fixed;
-  top: 200px;
+  top: 50%;
   flex-direction: column;
   width: 40px;
   margin-left: -50px;
@@ -2748,7 +2748,7 @@ header #nav .icon-expandmenu.active {
   border-bottom: 3px solid #eee;
 }
 
-.box_samecate .sc-heading {
+.box-samecat .sc-heading {
   text-transform: capitalize;
   border-bottom: 1px solid #eee;
   display: flex;
@@ -2790,6 +2790,107 @@ header #nav .icon-expandmenu.active {
   text-transform: capitalize;
   border-top: 3px solid #eee;
   border-bottom: 1px solid #eee;
+}
+
+.header_detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 8px 20px;
+  background: #fff;
+  z-index: 9999;
+  border-bottom: thin solid #008837;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transition-duration: 350ms;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+  will-change: transform;
+}
+.header_detail.add_sticky {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.header_detail ul li {
+  float: left;
+}
+.header_detail .kc-facebook .icon-kcf {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #3b4f87;
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+}
+.header_detail .comment_icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  display: inline-block;
+  margin-left: 12px;
+}
+.header_detail .comment_icon svg {
+  margin-left: 7px;
+  margin-bottom: -3px;
+}
+.header_detail .comment_icon .cls-1 {
+  fill: #fe0000;
+}
+
+.zl-share {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-left: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.zb-btn-blue--30x30 .zb-logo-zalo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.15em;
+  width: 20px;
+  height: 20px;
+  background: url("../images/logo_white_s_30.png");
+  background-size: 20px 20px;
+}
+
+.kc-facebook .icon-kcf:before {
+  background: url("../images/icon-facebook-nav.webp") center center no-repeat;
+  background-size: 8px 14px;
+  width: 8px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -4px;
+  content: "";
+  top: 50%;
+  margin-top: -7px;
+}
+
+.zl-share .zalo-share-button {
+  position: absolute;
+  left: -3px;
+  top: -2px;
+}
+
+.kc-item.kc-facebook {
+  height: 24px;
+}
+
+.header_detail__left,
+.header_detail__right {
+  display: flex;
+  align-items: center;
 }
 
 .ema-header-pc {
