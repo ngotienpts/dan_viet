@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // show menu pc
   var barPc = document.getElementById("nav");
-  var offset = barPc.offsetTop;
+  if (barPc) {
+    var offset = barPc.offsetTop;
+  }
   // tabs
   var tabs = document.querySelectorAll(".tab-item");
   var panes = document.querySelectorAll(".tab-pane");

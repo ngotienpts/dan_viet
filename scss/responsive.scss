@@ -32,9 +32,41 @@
 @media (max-width: 62em) {
   .hightlight-top,
   .topic-list {
-    max-width: 490px;
+    max-width: 450px;
   }
-  /*-------------------------------------------------------------*/
+  /*-------------------------------------------------------------index*/
+  .main-top,
+  .main-secondary,
+  .main-third,
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .main-topic .topic-list {
+    width: 50%;
+  }
+  /*-------------------------------------------------------------cate*/
+  .breadcum,
+  .talk-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .cate-block .main-secondary,
+  .detail-block .main-secondary {
+    display: block;
+  }
+  .read-lot {
+    max-width: 100%;
+  }
+  /*-------------------------------------------------------------detail*/
+  .box-cmt {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hot-news-container {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 // max width 768px
 @media (max-width: 48em) {
@@ -49,9 +81,17 @@
   }
   .hightlight-top,
   .topic-list {
-    max-width: 430px;
+    max-width: 100%;
   }
-  /*-------------------------------------------------------------*/
+  /*-------------------------------------------------------------index*/
+  .main-topic .topic-list {
+    width: 45%;
+  }
+  .main-secondary,
+  .main-third {
+    display: block;
+  }
+  /*-------------------------------------------------------------cate*/
 }
 
 // max width 640px
@@ -68,6 +108,11 @@
 
   #main {
     margin-top: 40px;
+  }
+  .main-secondary,
+  .main-third {
+    padding-left: 0;
+    padding-right: 0;
   }
   .hightlight-top__slide-container {
     display: flex;
