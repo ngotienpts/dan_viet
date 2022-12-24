@@ -1030,6 +1030,16 @@ img {
   height: 12px;
   background-position: -77px -89px;
 }
+.icondv.icon-ttvbig {
+  width: 30px;
+  height: 16px;
+  background-position: -26px -465px;
+}
+.icondv.icon-etimebig {
+  width: 28px;
+  height: 27px;
+  background-position: -79px -459px;
+}
 
 .iconnew-tgtt {
   background: url("../images/icons-27052020.webp") no-repeat -54px 0;
@@ -2269,6 +2279,82 @@ header #nav .icon-expandmenu.active {
 }
 .share-facebook img {
   margin-right: 4px;
+}
+
+.box-bot {
+  grid-gap: 0;
+  border-top: 3px solid #eee;
+}
+.box-bot .boxbot-left {
+  background-color: #fff;
+  padding: 12px;
+}
+.box-bot .boxbot-right {
+  padding: 12px;
+}
+.box-bot .title-top {
+  display: flex;
+  padding: 17px;
+  background-color: #f3f3f3;
+  align-items: center;
+  border-radius: 5px 5px 0 0;
+}
+.box-bot .title-top i {
+  margin-right: 10px;
+}
+.box-bot .title-top a {
+  font-size: 16px;
+  font-weight: bold;
+}
+.box-bot .boxbot-right-block {
+  border: 1px solid #eee;
+  max-height: 265px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.box-bot .boxbot-right-container {
+  max-width: 100%;
+  overflow-y: scroll;
+  scrollbar-color: rgba(143, 143, 143, 0.35) transparent;
+  scrollbar-width: thin;
+  padding: 12px 17px;
+}
+.box-bot .boxbot-right-item {
+  display: flex;
+  margin-bottom: 14px;
+}
+.box-bot .boxbot-right-img {
+  width: 35%;
+  flex-shrink: 0;
+}
+.box-bot .boxbot-right-title {
+  flex: 1;
+  margin-left: 11px;
+}
+.box-bot .boxbot-right-container::-webkit-scrollbar {
+  width: 3px;
+}
+.box-bot .boxbot-right-container::-webkit-scrollbar-thumb {
+  background: rgba(143, 143, 143, 0.35);
+  border-radius: 5px;
+}
+.box-bot .boxbot-right-container::-webkit-scrollbar-track {
+  background: none;
+}
+.box-bot .boxbot-right-container:after {
+  content: "";
+  background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+  height: 69px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.box-bot .boxbot-right-container:hover::after {
+  content: none;
 }
 
 .breadcum {

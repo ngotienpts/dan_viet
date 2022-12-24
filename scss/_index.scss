@@ -662,3 +662,88 @@
     margin-right: 4px;
   }
 }
+.box-bot {
+  grid-gap: 0;
+  border-top: 3px solid #eee;
+  & .boxbot-left {
+    background-color: #fff;
+    padding: 12px;
+  }
+
+  & .boxbot-right {
+    padding: 12px;
+  }
+
+  & .title-top {
+    display: flex;
+    padding: 17px;
+    background-color: #f3f3f3;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+  }
+
+  & .title-top i {
+    margin-right: 10px;
+  }
+
+  & .title-top a {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  & .boxbot-right-block {
+    border: 1px solid #eee;
+    max-height: 265px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  & .boxbot-right-container {
+    max-width: 100%;
+    overflow-y: scroll;
+    scrollbar-color: rgba(143, 143, 143, 0.35) transparent;
+    scrollbar-width: thin;
+    padding: 12px 17px;
+  }
+  & .boxbot-right-item {
+    display: flex;
+    margin-bottom: 14px;
+  }
+
+  & .boxbot-right-img {
+    width: 35%;
+    flex-shrink: 0;
+  }
+
+  & .boxbot-right-title {
+    flex: 1;
+    margin-left: 11px;
+  }
+
+  & .boxbot-right-container::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  & .boxbot-right-container::-webkit-scrollbar-thumb {
+    background: rgba(143, 143, 143, 0.35);
+    border-radius: 5px;
+  }
+  & .boxbot-right-container::-webkit-scrollbar-track {
+    background: none;
+  }
+  & .boxbot-right-container:after {
+    content: "";
+    background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+    height: 69px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  & .boxbot-right-container:hover::after {
+    content: none;
+  }
+}
