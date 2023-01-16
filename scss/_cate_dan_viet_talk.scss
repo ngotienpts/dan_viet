@@ -18,6 +18,34 @@
   grid-gap: 30px;
   margin-bottom: 30px;
 }
+.header-talk {
+  & .nav {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #fff;
+
+    & li {
+      margin: 0 21px;
+      line-height: 50px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        opacity: 0;
+      }
+      &:hover::before,
+      &.active::before {
+        opacity: 1;
+      }
+    }
+  }
+}
 .header-talk-mb-wrapper {
   position: fixed;
   top: 0;
@@ -39,5 +67,85 @@
     font-size: 24px;
     font-family: "Times New Roman";
     font-weight: 500;
+  }
+}
+.ema-heading {
+  font-family: Century, sans-serif;
+  font-size: 45px;
+  margin: 40px 0 50px;
+  text-align: center;
+  text-transform: capitalize;
+
+  & i {
+    margin-right: 10px;
+    margin-bottom: -2px;
+  }
+
+  & ~ .talk-container .talk-top-heading,
+  & ~ .talk-container .talk-bot-heading {
+    margin-bottom: 20px;
+  }
+}
+.readmore {
+  text-align: center;
+  & a {
+    margin: auto;
+    display: inline-block;
+    height: 30px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #008837;
+    padding: 5px 18px;
+  }
+}
+#menu-media {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 40px;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  & li {
+    color: #6c6e70;
+    font: normal 13px/15px Roboto;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &.active {
+      font-family: RobotoMedium, sans-serif;
+      color: #008837;
+      text-decoration: underline;
+    }
+    & .icon-youtube {
+      background: #f61c0d;
+      width: 18px;
+      height: 13px;
+      position: relative;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: -2px;
+      margin-right: 1px;
+      &:after {
+        position: absolute;
+        width: 0;
+        height: 0;
+        background: transparent;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-bottom: 6px solid #fff;
+        content: "";
+        transform: rotate(90deg);
+        left: 50%;
+        top: 50%;
+        margin-left: -2px;
+        margin-top: -4px;
+      }
+    }
   }
 }

@@ -136,6 +136,11 @@
     height: 81px;
     background-position: -26px -333px;
   }
+  &.icon-play-md {
+    width: 43px;
+    height: 51px;
+    background-position: -391px -347px;
+  }
   &.icon-facebook {
     width: 32px;
     height: 32px;
@@ -187,7 +192,28 @@
     height: 27px;
     background-position: -79px -459px;
   }
+  &.icondv.icon-medialogo {
+    width: 113px;
+    height: 32px;
+    background-position: -289px -215px;
+  }
+  &.icon-emagazine {
+    width: 43px;
+    height: 46px;
+    background-position: -440px -277px;
+  }
+  &.icon-infographic {
+    width: 46px;
+    height: 45px;
+    background-position: -364px -277px;
+  }
+  &.icon-videobig {
+    width: 49px;
+    height: 49px;
+    background-position: -293px -349px;
+  }
 }
+
 .iconnew-tgtt {
   background: url("../images/icons-27052020.webp") no-repeat -54px 0;
   background-size: 69px 25px;
@@ -727,6 +753,7 @@ header {
   background: #008837;
   height: 35px;
   border-radius: 0 0 2px 2px;
+  z-index: 1000;
 
   & .wrapper {
     padding-left: 20px;
